@@ -3,121 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Add Three Numbers - Tutor Style</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #f7f9fc;
-      color: #222;
-    }
-
-    h1 {
-      color: #1f4e79;
-    }
-
-    .lesson-box {
-      background: #ffffff;
-      border-left: 5px solid #1f4e79;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    }
-
-    code {
-      background: #eef2f7;
-      padding: 3px 6px;
-      border-radius: 4px;
-    }
-
-    pre {
-      background: #1e1e1e;
-      color: #ffffff;
-      padding: 15px;
-      border-radius: 8px;
-      overflow-x: auto;
-    }
-
-    button {
-      background-color: #1f4e79;
-      color: white;
-      border: none;
-      padding: 10px 16px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    button:hover {
-      background-color: #163957;
-    }
-
-    #result {
-      font-weight: bold;
-      color: #0a7a28;
-      margin-top: 15px;
-    }
-  </style>
+  <title>MVC Notepad App</title>
+  <link rel="stylesheet" href="src/styles/styles.css" />
 </head>
 <body>
-  <h1>HTML + JavaScript Tutor: Adding Three Numbers</h1>
+  <main class="app">
+    <section class="hero">
+      <p class="eyebrow">MVC JavaScript Project</p>
+      <h1>Notepad Application</h1>
+      <p>
+        A simple notepad app built with a clean MVC structure:
+        Model, View, and Controller.
+      </p>
+    </section>
 
-  <div class="lesson-box">
-    <h2>Step 1: Understand the Goal</h2>
-    <p>
-      In this lesson, we will learn how to add three numbers using JavaScript inside an HTML page.
-    </p>
-    <p>
-      We will use three numbers: <code>5</code>, <code>10</code>, and <code>15</code>. Our goal is to add them and show the answer on the page.
-    </p>
-  </div>
+    <section class="editor-card">
+      <div class="form-group">
+        <label for="noteTitle">Note Title</label>
+        <input id="noteTitle" type="text" placeholder="Enter note title" />
+      </div>
 
-  <div class="lesson-box">
-    <h2>Step 2: The JavaScript Code</h2>
-    <p>
-      This function takes three values, <code>a</code>, <code>b</code>, and <code>c</code>, then returns their sum.
-    </p>
+      <div class="form-group">
+        <label for="noteContent">Note Content</label>
+        <textarea id="noteContent" rows="8" placeholder="Write your note here..."></textarea>
+      </div>
 
-    <pre><code>function addThreeNumbers(a, b, c) {
-  return a + b + c;
-}</code></pre>
-  </div>
+      <div class="actions">
+        <button id="saveNoteBtn">Save Note</button>
+        <button id="clearFormBtn" class="secondary">Clear</button>
+      </div>
+    </section>
 
-  <div class="lesson-box">
-    <h2>Step 3: Try It</h2>
-    <p>
-      Click the button below to add <code>5</code>, <code>10</code>, and <code>15</code>.
-    </p>
+    <section class="notes-section">
+      <h2>Saved Notes</h2>
+      <div id="notesList" class="notes-list"></div>
+    </section>
+  </main>
 
-    <button onclick="showResult()">Add Three Numbers</button>
-    <p id="result"></p>
-  </div>
-
-  <div class="lesson-box">
-    <h2>Step 4: What Happens?</h2>
-    <p>
-      When you click the button, JavaScript runs the function, adds all three numbers together, and displays the answer on the page.
-    </p>
-  </div>
-
-  <script>
-    function addThreeNumbers(a, b, c) {
-      return a + b + c;
-    }
-
-    function showResult() {
-      const numberOne = 5;
-      const numberTwo = 10;
-      const numberThree = 15;
-      const total = addThreeNumbers(numberOne, numberTwo, numberThree);
-
-      document.getElementById("result").textContent =
-        numberOne + " + " + numberTwo + " + " + numberThree + " = " + total;
-    }
-  </script>
+  <script type="module" src="src/app.js"></script>
 </body>
 </html>
