@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Two Numbers - Tutor Style</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f7f9fc;
+      color: #222;
+    }
+
+    h1 {
+      color: #1f4e79;
+    }
+
+    .lesson-box {
+      background: #ffffff;
+      border-left: 5px solid #1f4e79;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    code {
+      background: #eef2f7;
+      padding: 3px 6px;
+      border-radius: 4px;
+    }
+
+    pre {
+      background: #1e1e1e;
+      color: #ffffff;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+
+    button {
+      background-color: #1f4e79;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #163957;
+    }
+
+    #result {
+      font-weight: bold;
+      color: #0a7a28;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>HTML + JavaScript Tutor: Adding Two Numbers</h1>
+
+  <div class="lesson-box">
+    <h2>Step 1: Understand the Goal</h2>
+    <p>
+      In this lesson, we will learn how to add two numbers using JavaScript inside an HTML page.
+    </p>
+    <p>
+      We will use two numbers: <code>5</code> and <code>10</code>. Our goal is to add them and show the answer on the page.
+    </p>
+  </div>
+
+  <div class="lesson-box">
+    <h2>Step 2: The JavaScript Code</h2>
+    <p>
+      This function takes two values, <code>a</code> and <code>b</code>, then returns their sum.
+    </p>
+
+    <pre><code>function addTwoNumbers(a, b) {
+  return a + b;
+}</code></pre>
+  </div>
+
+  <div class="lesson-box">
+    <h2>Step 3: Try It</h2>
+    <p>
+      Click the button below to add <code>5</code> and <code>10</code>.
+    </p>
+
+    <button onclick="showResult()">Add Numbers</button>
+    <p id="result"></p>
+  </div>
+
+  <div class="lesson-box">
+    <h2>Step 4: What Happens?</h2>
+    <p>
+      When you click the button, JavaScript runs the function, adds the numbers, and displays the answer on the page.
+    </p>
+  </div>
+
+  <script>
+    function addTwoNumbers(a, b) {
+      return a + b;
+    }
+
+    function showResult() {
+      const numberOne = 5;
+      const numberTwo = 10;
+      const total = addTwoNumbers(numberOne, numberTwo);
+
+      document.getElementById("result").textContent =
+        numberOne + " + " + numberTwo + " = " + total;
+    }
+  </script>
+</body>
+</html>
