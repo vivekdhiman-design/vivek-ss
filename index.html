@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Add Two Numbers - Tutor Style</title>
+  <title>Add Three Numbers - Tutor Style</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -64,58 +64,59 @@
   </style>
 </head>
 <body>
-  <h1>HTML + JavaScript Tutor: Adding Two Numbers</h1>
+  <h1>HTML + JavaScript Tutor: Adding Three Numbers</h1>
 
   <div class="lesson-box">
     <h2>Step 1: Understand the Goal</h2>
     <p>
-      In this lesson, we will learn how to add two numbers using JavaScript inside an HTML page.
+      In this lesson, we will learn how to add three numbers using JavaScript inside an HTML page.
     </p>
     <p>
-      We will use two numbers: <code>5</code> and <code>10</code>. Our goal is to add them and show the answer on the page.
+      We will use three numbers: <code>5</code>, <code>10</code>, and <code>15</code>. Our goal is to add them and show the answer on the page.
     </p>
   </div>
 
   <div class="lesson-box">
     <h2>Step 2: The JavaScript Code</h2>
     <p>
-      This function takes two values, <code>a</code> and <code>b</code>, then returns their sum.
+      This function takes three values, <code>a</code>, <code>b</code>, and <code>c</code>, then returns their sum.
     </p>
 
-    <pre><code>function addTwoNumbers(a, b) {
-  return a + b;
+    <pre><code>function addThreeNumbers(a, b, c) {
+  return a + b + c;
 }</code></pre>
   </div>
 
   <div class="lesson-box">
     <h2>Step 3: Try It</h2>
     <p>
-      Click the button below to add <code>5</code> and <code>10</code>.
+      Click the button below to add <code>5</code>, <code>10</code>, and <code>15</code>.
     </p>
 
-    <button onclick="showResult()">Add Numbers</button>
+    <button onclick="showResult()">Add Three Numbers</button>
     <p id="result"></p>
   </div>
 
   <div class="lesson-box">
     <h2>Step 4: What Happens?</h2>
     <p>
-      When you click the button, JavaScript runs the function, adds the numbers, and displays the answer on the page.
+      When you click the button, JavaScript runs the function, adds all three numbers together, and displays the answer on the page.
     </p>
   </div>
 
   <script>
-    function addTwoNumbers(a, b) {
-      return a + b;
+    function addThreeNumbers(a, b, c) {
+      return a + b + c;
     }
 
     function showResult() {
       const numberOne = 5;
       const numberTwo = 10;
-      const total = addTwoNumbers(numberOne, numberTwo);
+      const numberThree = 15;
+      const total = addThreeNumbers(numberOne, numberTwo, numberThree);
 
       document.getElementById("result").textContent =
-        numberOne + " + " + numberTwo + " = " + total;
+        numberOne + " + " + numberTwo + " + " + numberThree + " = " + total;
     }
   </script>
 </body>
