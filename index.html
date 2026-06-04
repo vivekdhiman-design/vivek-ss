@@ -4,34 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MVC Notepad App</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="src/styles.css" />
 </head>
 <body>
-  <main class="app-shell">
-    <section class="hero">
-      <p class="eyebrow">MVC JavaScript Project</p>
-      <h1>Notepad Application</h1>
-      <p>
-        A beginner-friendly notepad app built with a simple Model-View-Controller structure.
-      </p>
-    </section>
+  <main class="app-container">
+    <section class="app-card">
+      <header class="app-header">
+        <h1>MVC Notepad App</h1>
+        <p>A simple notepad application built using the Model-View-Controller pattern.</p>
+      </header>
 
-    <section class="note-panel" aria-label="Create or edit note">
-      <input id="note-title" type="text" placeholder="Note title" />
-      <textarea id="note-content" rows="8" placeholder="Write your note here..."></textarea>
+      <section class="note-form" aria-label="Create a note">
+        <input id="note-title" type="text" placeholder="Note title" />
+        <textarea id="note-content" placeholder="Write your note here..."></textarea>
+        <button id="save-note-btn">Save Note</button>
+      </section>
 
-      <div class="actions">
-        <button id="save-note">Save Note</button>
-        <button id="clear-form" class="secondary">Clear</button>
-      </div>
-    </section>
-
-    <section class="notes-section" aria-label="Saved notes">
-      <h2>Saved Notes</h2>
-      <div id="notes-list" class="notes-list"></div>
+      <section class="notes-section" aria-label="Saved notes">
+        <h2>Saved Notes</h2>
+        <div id="notes-list" class="notes-list"></div>
+      </section>
     </section>
   </main>
 
-  <script type="module" src="js/app.js"></script>
+  <script type="module" src="src/app.js"></script>
 </body>
 </html>
